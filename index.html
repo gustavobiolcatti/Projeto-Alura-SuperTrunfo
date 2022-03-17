@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Imersão Dev - Aula 07 e 08</title>
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-super-trunfo.png" class="page-logo" alt="">
+            <h1 class="page-title">Super Trunfo - Pokémon</h1>
+            
+            <div class="painel">
+                <section class="formulario">
+                    <div class="formulario__caixa">
+                        <label for="nome" class="formulario__label">Nome:</label>
+                        <input id="nome" type="name" class="formulario__input">
+    
+                        <button id="alterar" type="submit" onclick="alterarJogador()" class="formulario__botao">Alterar</button>
+    
+                        <button id="resetar" type="submit" onclick="resetarJogo()" class="formulario__botao formulario__botao--resetar">Resetar</button>
+                    </div>
+                </section>
+    
+                <table class="tabela__classificacao">
+                    <thead>
+                        <tr class="tabela__linha tabela__linha--cabecalho">
+                            <th>Time</th>
+                            <th>Vitórias</th>
+                            <th>Empates</th>
+                            <th>Derrotas</th>
+                            <th>Pontos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaJogadores">
+                    </tbody>
+                </table>
+            </div>
+
+            <img src="../" alt="">
+            
+            <button id="btnSortear" onclick="sortearCartas()" class="jogo__botao">Sortear cartas</button>
+            <button type="button" id="btnJogar" onclick="jogar()" disabled="false" class="jogo__botao">Jogar</button>
+        </div>
+
+        <section id="exibicao" class="container exibicao">
+            <section class="container__carta-usuario">
+                <div class="container__restantes">
+                    <p class="container__restantes-titulo">Cartas restantes: </p>
+                    <p id="restantesUsuario">0</p>
+                </div>
+                
+                <div id="carta carta__usuario" class="carta">
+                    <p id="carta__usuario-nome" class="carta__nome"></p>
+                    <img id="carta__usuario-imagem" class="carta__imagem carta__imagem--usuario" src="">
+                    <form id="form">
+                        <div class="carta__atributos" id="atributos"></div>
+                    </form>
+                </div>
+            </section>
+            
+            <p id="resultado" class="formulario__resultado"></p>
+            
+            <div class="container__carta-robo">
+                <div class="container__restantes">
+                    <p class="container__restantes-titulo">Cartas restantes: </p>
+                    <p id="restantesRobo">0</p>
+                </div>
+                
+                <section id="carta carta__robo" class="carta">
+                    <p id="carta__robo-nome" class="carta__nome"></p>
+                    <img id="carta__robo-imagem" class="carta__imagem" src="">
+                    <div class="carta__atributos carta__robo-atributos" id="carta__robo-atributos"></div>
+                </section>
+            </div>
+        </section>
+        <script src="script/script.js"></script>
+    </body>
+</html>
